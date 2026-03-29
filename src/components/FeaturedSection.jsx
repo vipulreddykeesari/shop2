@@ -16,7 +16,7 @@ const featured = [
   },
   {
     id: 4,
-    name: 'The Big Cluck Burger',
+    name: 'The Big Rahman Burger',
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80',
     price: 399,
     rating: 4.9,

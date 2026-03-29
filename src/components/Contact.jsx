@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: <Mail size={20} strokeWidth={1.5} />,
     title: 'Inquiries',
-    lines: ['concierge@cluckandgrill.com', 'events@cluckandgrill.com'],
+    lines: ['concierge@rahmanchickencenter.com', 'events@rahmanchickencenter.com'],
     color: 'from-purple-500/8 to-transparent',
   },
   {

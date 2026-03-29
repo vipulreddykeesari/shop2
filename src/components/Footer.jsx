@@ -106,7 +106,7 @@ export default function Footer() {
                   <Flame size={24} className="fill-current" />
                 </div>
                 <div>
-                  <h3 className="font-playfair text-2xl font-bold text-cream leading-none tracking-tight group-hover:text-primary transition-colors duration-400">Cluck & Grill</h3>
+                  <h3 className="font-playfair text-2xl font-bold text-cream leading-none tracking-tight group-hover:text-primary transition-colors duration-400">Rahman Chicken Center</h3>
                   <p className="text-[9px] tracking-[0.3em] uppercase text-warm-gray mt-1 font-medium">Premium Dining</p>
                 </div>
               </Link>
@@ -121,9 +121,11 @@ export default function Footer() {
                   <div className="w-10 h-10 rounded-xl border border-white/8 flex items-center justify-center text-cream group-hover:border-primary/40 group-hover:bg-primary/5 transition-all"><Phone size={15} /></div>
                   <span className="text-sm font-medium tracking-wide">(123) 456-7890</span>
                 </a>
-                <a href="mailto:hello@cluckandgrill.com" className="flex items-center gap-4 text-warm-gray hover:text-primary transition-all hover:translate-x-1 duration-300 w-fit group">
-                  <div className="w-10 h-10 rounded-xl border border-white/8 flex items-center justify-center text-cream group-hover:border-primary/40 group-hover:bg-primary/5 transition-all"><Mail size={15} /></div>
-                  <span className="text-sm font-medium tracking-wide">hello@cluckandgrill.com</span>
+                <a href="mailto:hello@rahmanchickencenter.com" className="flex items-center gap-4 text-warm-gray hover:text-primary transition-all hover:translate-x-1 duration-300 w-fit group">
+                  <div className="w-10 h-10 rounded-full border border-dark-gray/60 flex items-center justify-center text-primary group-hover:bg-primary/10 group-hover:border-primary/50 transition-colors duration-300">
+                    <Mail size={18} />
+                  </div>
+                  <span className="text-sm font-medium tracking-wide">hello@rahmanchickencenter.com</span>
                 </a>
                 <div className="flex items-center gap-4 text-warm-gray w-fit">
                   <div className="w-10 h-10 rounded-xl border border-white/8 flex items-center justify-center text-cream"><MapPin size={15} /></div>
@@ -177,7 +179,7 @@ export default function Footer() {
             </div>
 
             <p className="text-warm-gray text-xs sm:text-sm font-light text-center md:text-left">
-              © 2026 <span className="text-cream font-medium">Cluck & Grill</span>. All rights reserved. Crafted with precision.
+              © 2026 <span className="text-cream font-medium">Rahman Chicken Center</span>. All rights reserved. Crafted with precision.
             </p>
 
             <div className="flex flex-wrap justify-center gap-8 text-[10px] text-warm-gray font-bold tracking-[0.2em] uppercase">

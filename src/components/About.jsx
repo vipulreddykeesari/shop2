@@ -29,7 +29,7 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2014', title: 'The Beginning', text: 'A small kitchen, a big dream — Cluck & Grill was born from a family recipe and a passion for perfection.' },
+  { year: '2014', title: 'The Beginning', text: 'A small kitchen, a big dream — Rahman Chicken Center was born from a family recipe and a passion for perfection.' },
   { year: '2017', title: 'First Award', text: "Recognized as the city's best flame-grilled restaurant, earning our first culinary excellence award." },
   { year: '2020', title: 'Going Digital', text: 'Launched online ordering and home delivery, bringing our premium dining experience directly to your doorstep.' },
   { year: '2024', title: 'National Recognition', text: 'Named among the top 50 restaurants in the country. Opened our flagship store featuring a live grill experience.' },
@@ -89,7 +89,7 @@ export default function About() {
             <span className="w-14 h-[1px] bg-gradient-to-l from-transparent to-primary/40"></span>
           </div>
           <h2 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-medium text-cream mb-6 leading-tight">
-            The Story of <span className="text-primary italic">Cluck & Grill</span>
+            The Story of <span className="text-primary italic">Rahman Chicken Center</span>
           </h2>
           <p className="text-warm-gray text-base max-w-xl mx-auto font-light leading-relaxed">
             Born from a passion for perfection, we've been serving the most exquisite,
@@ -152,7 +152,7 @@ export default function About() {
                 beloved culinary destination.
               </p>
               <p>
-                Every dish at Cluck & Grill represents our commitment to culinary artistry.
+                Every dish at Rahman Chicken Center represents our commitment to culinary artistry.
                 Slow-grilled over artisanal charcoal and paired with our handcrafted sauces,
                 we promise an unforgettable gastronomic journey.
               </p>

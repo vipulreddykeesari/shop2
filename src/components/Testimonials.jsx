@@ -16,7 +16,7 @@ const testimonials = [
     role: 'Gastronomy Enthusiast',
     avatar: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: 'A transcendent dining experience. We have been ordering from Cluck & Grill for over two years, and the consistency in quality and flavor is nothing short of remarkable.',
+    text: 'A transcendent dining experience. We have been ordering from Rahman Chicken Center for over two years, and the consistency in quality and flavor is nothing short of remarkable.',
   },
   {
     name: 'Ananya Patel',
@@ -37,7 +37,7 @@ const testimonials = [
     role: 'Food Blogger',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: "Every visit to Cluck & Grill is an event. My followers absolutely love their Nashville Hot Burger — it's become one of my most requested reviews of all time.",
+    text: "Every visit to Rahman Chicken Center is an event. My followers absolutely love their Nashville Hot Burger — it's become one of my most requested reviews of all time.",
   },
 ]
 

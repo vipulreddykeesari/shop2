@@ -20,7 +20,7 @@ export default function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemov
   const remaining = FREE_DELIVERY_THRESHOLD - subtotal
 
   const handlePromo = () => {
-    if (promoCode.toUpperCase() === 'CLUCK10') {
+    if (promoCode.toUpperCase() === 'RAHMAN10') {
       setPromoApplied(true)
       setPromoError('')
     } else {
@@ -226,7 +226,7 @@ export default function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemov
                     )}
                   </AnimatePresence>
                   {!promoApplied && (
-                    <p className="text-[10px] text-warm-gray/35 mt-1.5">Try: <span className="text-primary/50">CLUCK10</span></p>
+                    <p className="text-[10px] text-warm-gray/35 mt-1.5">Try: <span className="text-primary/50">RAHMAN10</span></p>
                   )}
                 </div>
 

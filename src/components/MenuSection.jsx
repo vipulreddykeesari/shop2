@@ -32,7 +32,7 @@ const menuItems = [
   },
   {
     id: 4,
-    name: 'The Big Cluck Burger',
+    name: 'The Big Rahman Burger',
     description: 'Crispy chicken patty, smoky BBQ sauce, aged cheddar, lettuce & pickles on a brioche bun.',
     price: 399, category: 'Burgers', badge: 'Chef Selection', rating: 4.9, emoji: '🍔',
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80',

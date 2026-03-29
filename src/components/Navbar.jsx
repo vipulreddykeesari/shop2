@@ -57,7 +57,7 @@ export default function Navbar({ cartCount, onCartClick }) {
               </div>
               <div className="flex flex-col">
                 <h1 className="font-playfair text-xl sm:text-2xl font-bold text-cream leading-none tracking-wide group-hover:text-primary transition-colors duration-400">
-                  Cluck & Grill
+                  Rahman Chicken Center
                 </h1>
                 <p className="text-[8px] tracking-[0.3em] uppercase text-warm-gray mt-0.5 font-medium">
                   Premium Dining
