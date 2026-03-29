@@ -6,38 +6,38 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 const testimonials = [
   {
     name: 'Priya Sharma',
-    role: 'Food Critic',
+    role: 'Home Chef',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: 'The flame-grilled thighs are absolutely divine. A true masterclass in culinary balance. The smoky undertones are unmatched and the presentation is flawless.',
+    text: 'The fresh whole chicken I got from here was incredibly tender and thoroughly cleaned. It made my weekend roast absolutely perfect. Best butchers in town!',
   },
   {
     name: 'Rahul Kapoor',
-    role: 'Gastronomy Enthusiast',
+    role: 'Fitness Enthusiast',
     avatar: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: 'A transcendent dining experience. We have been ordering from Rahman Chicken Center for over two years, and the consistency in quality and flavor is nothing short of remarkable.',
+    text: 'I buy my weekly protein from Rahman Chicken Center. The boneless breasts are always fresh, perfectly cut, and exactly the weight they promise. Fantastic service.',
   },
   {
     name: 'Ananya Patel',
-    role: 'Lifestyle Editor',
+    role: 'Mother of Two',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: 'Their tandoori-spiced cuts redefine comfort food. Exquisite flavor profiles delivered with the sophistication of a fine-dining establishment. Highly recommended.',
+    text: 'Hygiene is my biggest concern when buying raw meat. This shop is spotless, and their packaging is premium. The curry cuts save me so much prep time.',
   },
   {
     name: 'Vikram Singh',
-    role: 'Chef & Restaurateur',
+    role: 'Restaurant Owner',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: 'As a fellow chef, I am blown away by the depth of flavor they achieve. The spice blends are impeccable and the grilling technique is world-class. Bravo!',
+    text: 'As a fellow restaurant owner, I appreciate their consistency. Their chicken is always farm-fresh, tender, and properly processed. A reliable partner.',
   },
   {
     name: 'Meera Joshi',
     role: 'Food Blogger',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    text: "Every visit to Rahman Chicken Center is an event. My followers absolutely love their Nashville Hot Burger — it's become one of my most requested reviews of all time.",
+    text: "The quality of meat completely changes the final dish. Since switching to Rahman Chicken Center's fresh cuts, my recipes have tasted significantly better.",
   },
 ]
 

@@ -3,114 +3,82 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Plus, Flame, Star, ShoppingBag, ArrowRight, X, LayoutGrid, List } from 'lucide-react'
 
-const categories = ['All', 'Grilled', 'Fried', 'Wings', 'Burgers', 'Sides', 'Combos']
+const categories = ['All', 'Whole Bird', 'Boneless', 'Curry Cut', 'Specialty', 'Combo']
 
 const menuItems = [
   {
     id: 1,
-    name: 'Smoky Flame-Grilled Thighs',
-    description: 'Bone-in culinary thighs marinated in our secret smoky spice blend, slow-grilled over charcoal.',
-    price: 349, category: 'Grilled', badge: 'Signature', rating: 4.9, emoji: '🍗',
-    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=800&q=80',
-    spicy: 2, prep: '20 min', calories: '380 cal',
+    name: 'Farm Fresh Whole Chicken',
+    description: 'Whole chicken with skin, thoroughly cleaned. Perfect for roasting or traditional recipes.',
+    price: 349, category: 'Whole Bird', badge: 'Signature', rating: 4.9, emoji: '🐔',
+    image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=800&q=80',
+    weight: '1.2 kg', pieces: '1 pc', origin: 'Farm',
   },
   {
     id: 2,
-    name: 'Golden Crispy Drumsticks',
-    description: 'Classic drumsticks double-coated in seasoned flour and fried to a perfect golden crunch.',
-    price: 299, category: 'Fried', badge: 'Popular', rating: 4.8, emoji: '🍗',
-    image: 'https://images.unsplash.com/photo-1585325701956-60dd9c8553bc?auto=format&fit=crop&w=800&q=80',
-    spicy: 1, prep: '15 min', calories: '420 cal',
+    name: 'Premium Boneless Breast',
+    description: 'Tender, skinless and boneless chicken breast fillets. High in protein, low in fat.',
+    price: 299, category: 'Boneless', badge: 'Popular', rating: 4.8, emoji: '🥩',
+    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=800&q=80',
+    weight: '500g', pieces: '3-4 pcs', origin: 'Farm',
   },
   {
     id: 3,
-    name: 'Firecracker Hot Wings',
-    description: 'Blazing hot wings tossed in our signature habanero glaze with a fiery kick.',
-    price: 279, category: 'Wings', badge: 'Spicy', rating: 4.7, emoji: '🍗',
-    image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80',
-    spicy: 3, prep: '18 min', calories: '350 cal',
+    name: 'Chicken Curry Cut (Small)',
+    description: 'Skinless chicken cut into small bite-sized pieces. Perfect for Indian curries.',
+    price: 189, category: 'Curry Cut', badge: 'Top Seller', rating: 4.7, emoji: '🔪',
+    image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=800&q=80',
+    weight: '500g', pieces: '14-16 pcs', origin: 'Farm',
   },
   {
     id: 4,
-    name: 'The Big Rahman Burger',
-    description: 'Crispy chicken patty, smoky BBQ sauce, aged cheddar, lettuce & pickles on a brioche bun.',
-    price: 399, category: 'Burgers', badge: 'Chef Selection', rating: 4.9, emoji: '🍔',
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80',
-    spicy: 1, prep: '22 min', calories: '560 cal',
+    name: 'Tender Chicken Drumsticks',
+    description: 'Fresh, succulent chicken lower leg joints. Ideal for grilling or deep frying.',
+    price: 249, category: 'Whole Bird', rating: 4.8, emoji: '🍗',
+    image: 'https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?auto=format&fit=crop&w=800&q=80',
+    weight: '500g', pieces: '5-6 pcs', origin: 'Farm',
   },
   {
     id: 5,
-    name: 'Honey Garlic Wings',
-    description: 'Tender wings glazed with a sweet honey garlic sauce and toasted sesame seeds.',
-    price: 299, category: 'Wings', rating: 4.8, emoji: '🍗',
-    image: 'https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?auto=format&fit=crop&w=800&q=80',
-    spicy: 0, prep: '16 min', calories: '340 cal',
+    name: 'Chicken Keema (Mince)',
+    description: 'Freshly minced premium boneless chicken. Best for kebabs and meatballs.',
+    price: 279, category: 'Specialty', badge: 'Fresh', rating: 4.9, emoji: '🥩',
+    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=800&q=80',
+    weight: '500g', pieces: 'Minced', origin: 'Farm',
   },
   {
     id: 6,
-    name: 'Loaded Chicken Fries',
-    description: 'Crispy seasoned fries topped with shredded chicken, truffle cheese sauce, and jalapeños.',
-    price: 249, category: 'Sides', rating: 4.6, emoji: '🍟',
-    image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=800&q=80',
-    spicy: 1, prep: '12 min', calories: '480 cal',
+    name: 'Chicken Liver & Gizzard',
+    description: 'Hygienically cleaned and cut chicken liver and gizzard. Rich in iron.',
+    price: 119, category: 'Specialty', rating: 4.6, emoji: '🩸',
+    image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=800&q=80',
+    weight: '500g', pieces: '15-20 pcs', origin: 'Farm',
   },
   {
     id: 7,
-    name: 'Tandoori Grilled Breast',
-    description: 'Herb-marinated chicken breast with tandoori spices, grilled to smoky perfection.',
-    price: 379, category: 'Grilled', badge: 'Light', rating: 4.8, emoji: '🍗',
-    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80',
-    spicy: 2, prep: '25 min', calories: '260 cal',
+    name: 'Chicken Soup Bones',
+    description: 'Fresh chicken bones rich in marrow, perfect for hearty and healthy broths.',
+    price: 99, category: 'Specialty', badge: 'Value', rating: 4.5, emoji: '🥣',
+    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=800&q=80',
+    weight: '500g', pieces: 'Bones', origin: 'Farm',
   },
   {
     id: 8,
-    name: 'Family Feast Combo',
-    description: '8pc grilled chicken, 4 sides, artisan breads and dips. Perfect for gatherings.',
-    price: 1299, category: 'Combos', rating: 4.9, badge: 'Value', emoji: '🎉',
-    image: 'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80',
-    spicy: 1, prep: '30 min', calories: '1800 cal',
-  },
-  {
-    id: 9,
-    name: 'Peri-Peri Chicken Wrap',
-    description: 'Grilled chicken strips with peri-peri glaze, fresh greens, wrapped in flatbread.',
-    price: 229, category: 'Sides', rating: 4.7, emoji: '🌯',
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
-    spicy: 2, prep: '14 min', calories: '320 cal',
-  },
-  {
-    id: 10,
-    name: 'Southern Fried Bucket',
-    description: '6pc southern-style fried chicken, extra crispy with our signature 12-spice blend.',
-    price: 599, category: 'Fried', badge: 'Classic', rating: 4.8, emoji: '🪣',
-    image: 'https://plus.unsplash.com/premium_photo-1670601440146-3b33dfcd7e17?auto=format&fit=crop&w=800&q=80',
-    spicy: 1, prep: '25 min', calories: '950 cal',
-  },
-  {
-    id: 11,
-    name: 'Spicy BBQ Grilled Combo',
-    description: '2pc grilled chicken, truffle fries, house slaw. The perfect culinary meal deal.',
-    price: 449, category: 'Combos', rating: 4.9, emoji: '🍱',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80',
-    spicy: 2, prep: '20 min', calories: '720 cal',
-  },
-  {
-    id: 12,
-    name: 'Nashville Hot Burger',
-    description: 'Extra spicy Nashville chicken, pickled slaw, pepper jack cheese on toasted brioche.',
-    price: 429, category: 'Burgers', badge: 'Spicy', rating: 4.7, emoji: '🍔',
-    image: 'https://plus.unsplash.com/premium_photo-1683619761464-6da4668b5a04?auto=format&fit=crop&w=800&q=80',
-    spicy: 3, prep: '22 min', calories: '590 cal',
+    name: 'Weekend Feast Combo',
+    description: '1kg Curry Cut, 500g Breast, 500g Drumsticks. Perfect for a family gathering.',
+    price: 899, category: 'Combo', rating: 4.9, badge: 'Saving', emoji: '🎉',
+    image: 'https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?auto=format&fit=crop&w=800&q=80',
+    weight: '2.0 kg', pieces: 'Assorted', origin: 'Farm',
   },
 ]
 
 const badgeColors = {
   Signature: 'bg-gradient-to-r from-primary to-primary-light border-primary-light text-dark',
   Popular: 'bg-cream border-white/40 text-dark',
-  Spicy: 'bg-[#991b1b] border-[#ef4444] text-white',
-  'Chef Selection': 'bg-dark-card border-primary text-primary',
-  Light: 'bg-[#166534] border-[#22c55e] text-white',
-  Value: 'bg-accent border-white/20 text-dark',
+  'Top Seller': 'bg-[#991b1b] border-[#ef4444] text-white',
+  Fresh: 'bg-[#166534] border-[#22c55e] text-white',
+  Value: 'bg-dark-card border-primary text-primary',
+  Saving: 'bg-accent border-white/20 text-dark',
   Classic: 'bg-white/8 border-white/15 text-cream',
 }
 
@@ -166,23 +134,14 @@ function QuickViewModal({ item, onClose, onAddToCart }) {
 
             <div className="flex flex-wrap gap-3 mb-9">
               {[
-                { label: item.prep, icon: '⏱️' },
-                { label: item.calories, icon: '🔥' },
+                { label: item.weight, icon: '⚖️' },
+                { label: item.pieces, icon: '🔪' },
                 { label: item.category, icon: '📂' },
               ].map((d) => (
                 <span key={d.label} className="px-3.5 py-2 bg-dark-surface rounded-xl text-xs text-warm-gray border border-white/4 font-light">
                   {d.icon} {d.label}
                 </span>
               ))}
-            </div>
-
-            <div className="flex items-center gap-2 mb-9">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-warm-gray font-bold">Heat Level</span>
-              <div className="flex gap-1">
-                {[...Array(3)].map((_, idx) => (
-                  <Flame key={idx} size={14} className={idx < item.spicy ? 'text-primary fill-primary' : 'text-white/8'} />
-                ))}
-              </div>
             </div>
 
             <div className="flex items-center justify-between pt-7 border-t border-white/8">
@@ -192,7 +151,7 @@ function QuickViewModal({ item, onClose, onAddToCart }) {
                 className="flex items-center gap-3 px-7 py-3.5 bg-gradient-to-r from-primary to-primary-light text-dark font-bold rounded-xl transition-all duration-400 hover:-translate-y-1 shadow-[0_12px_30px_rgba(212,168,83,0.2)] tracking-wide"
               >
                 <ShoppingBag size={17} />
-                Add to Order
+                Add to Cart
               </button>
             </div>
           </div>
@@ -368,13 +327,9 @@ export default function MenuSection({ onAddToCart }) {
                     </p>
 
                     <div className="mt-auto border-t border-white/6 pt-4 flex justify-between items-end">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-[8px] uppercase tracking-[0.2em] text-warm-gray mr-0.5 font-bold">Heat</span>
-                        <div className="flex gap-0.5">
-                          {[...Array(3)].map((_, idx) => (
-                            <Flame key={idx} size={11} className={idx < item.spicy ? 'text-primary fill-primary' : 'text-white/8'} />
-                          ))}
-                        </div>
+                      <div className="flex items-center gap-1.5 text-warm-gray">
+                        <span className="text-[10px] font-medium tracking-wide border border-white/10 px-2 py-0.5 rounded-md">{item.weight}</span>
+                        <span className="text-[10px] font-medium tracking-wide border border-white/10 px-2 py-0.5 rounded-md">{item.pieces}</span>
                       </div>
                       <span className="text-2xl font-playfair font-semibold text-primary">₹{item.price}</span>
                     </div>
@@ -407,18 +362,10 @@ export default function MenuSection({ onAddToCart }) {
                       </div>
                       <p className="text-warm-gray text-sm font-light line-clamp-1 hidden sm:block">{item.description}</p>
                     </div>
-                    <div className="flex items-center gap-6 mt-2">
-                      <div className="flex gap-0.5">
-                        {[...Array(3)].map((_, idx) => (
-                          <Flame key={idx} size={11} className={idx < item.spicy ? 'text-primary fill-primary' : 'text-white/8'} />
-                        ))}
+                      <div className="flex items-center gap-3">
+                        <span className="text-[10px] text-warm-gray font-medium tracking-wide border border-white/10 px-2.5 py-1 rounded-md">{item.weight}</span>
+                        <span className="text-[10px] text-warm-gray font-medium tracking-wide border border-white/10 px-2.5 py-1 rounded-md">{item.pieces}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Star size={12} className="text-primary fill-primary" />
-                        <span className="text-xs text-warm-gray">{item.rating}</span>
-                      </div>
-                      <span className="text-xs text-warm-gray font-light">{item.prep}</span>
-                    </div>
                   </div>
 
                   <div className="flex flex-col items-end justify-between py-1 shrink-0">

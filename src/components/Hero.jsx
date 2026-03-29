@@ -79,13 +79,13 @@ export default function Hero() {
               <span className="w-10 h-[1px] bg-gradient-to-r from-primary to-transparent"></span>
               <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-primary flex items-center gap-2">
                 <Flame size={11} className="text-primary fill-primary animate-bounce-subtle" />
-                A Culinary Experience
+                Farm-Fresh Quality
               </span>
             </motion.div>
 
             {/* Animated heading */}
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.08] mb-8 text-cream" style={{ wordSpacing: '0.15em' }}>
-              {'The Art of'.split(' ').map((word, i) => (
+              {'The Pinnacle of'.split(' ').map((word, i) => (
                 <motion.span
                   key={i}
                   custom={i}
@@ -99,7 +99,7 @@ export default function Hero() {
                 </motion.span>
               ))}
               <br />
-              {'Flame & Flavor'.split(' ').map((word, i) => (
+              {'Freshness & Hygiene'.split(' ').map((word, i) => (
                 <motion.span
                   key={`b-${i}`}
                   custom={i + 3}
@@ -120,7 +120,7 @@ export default function Hero() {
               transition={{ delay: 1.2, duration: 0.9 }}
               className="text-warm-gray text-base sm:text-lg leading-[1.8] mb-12 max-w-md font-light"
             >
-              Experience the pinnacle of flame-grilled mastery. We deliver gourmet, artisanal chicken dishes right to your table — crafted with passion and precision.
+              Experience the pinnacle of freshness. We provide the most hygienic, premium raw chicken cuts straight from farm to table — crafted for your home cooking.
             </motion.p>
 
             {/* CTAs */}
@@ -154,9 +154,9 @@ export default function Hero() {
               className="grid grid-cols-3 gap-6 sm:gap-12 w-full max-w-lg border-t border-white/6 pt-8"
             >
               {[
-                { icon: <Clock size={20} strokeWidth={1.5} />, value: '25 m', label: 'Delivery' },
-                { icon: <Star size={20} strokeWidth={1.5} />, value: '4.9', label: 'Excellence' },
-                { icon: <Truck size={20} strokeWidth={1.5} />, value: 'Free', label: 'Over ₹499' },
+                { icon: <Clock size={20} strokeWidth={1.5} />, value: 'Daily', label: 'Fresh Cuts' },
+                { icon: <Star size={20} strokeWidth={1.5} />, value: '100%', label: 'Hygienic' },
+                { icon: <Truck size={20} strokeWidth={1.5} />, value: 'Free', label: 'Delivery' },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -193,8 +193,8 @@ export default function Hero() {
 
               <div className="relative w-full h-full overflow-hidden rounded-[2rem] image-zoom-container bg-dark-card border border-white/8 shadow-[0_50px_100px_rgba(0,0,0,0.7)]">
                 <img
-                  src="https://images.unsplash.com/photo-1585325701956-60dd9c8553bc?auto=format&fit=crop&w=800&q=80"
-                  alt="Gourmet Fried Chicken"
+                  src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=800&q=80"
+                  alt="Premium Raw Chicken"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-dark/20 opacity-70" />

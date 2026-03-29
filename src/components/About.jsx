@@ -13,26 +13,26 @@ const stats = [
 const values = [
   {
     icon: <Flame size={24} strokeWidth={1.5} />,
-    title: 'Flame-Grilled Fresh',
-    description: 'Every piece is marinated for 24 hours and grilled over real charcoal for that authentic, sophisticated smoky flavor.',
+    title: 'Daily Fresh Cuts',
+    description: 'Every piece is cut fresh daily to ensure maximum tenderness and flavor for your home-cooked meals.',
   },
   {
     icon: <Leaf size={24} strokeWidth={1.5} />,
-    title: 'Premium Ingredients',
-    description: 'We source only the freshest, locally-raised poultry and pure organic herbs. No shortcuts in our kitchen, ever.',
+    title: 'Clean & Hygienic',
+    description: 'We source only from trusted farms. Our facility maintains the highest standards of cleanliness and food safety.',
   },
   {
     icon: <HeartHandshake size={24} strokeWidth={1.5} />,
-    title: 'Crafted with Passion',
-    description: 'Our family recipes have been perfected over three generations, bringing you timeless flavors elevated to modern standards.',
+    title: 'Expert Butchery',
+    description: 'Our skilled butchers carefully prepare each cut with precision, giving you clean, ready-to-cook meat every time.',
   },
 ]
 
 const timeline = [
-  { year: '2014', title: 'The Beginning', text: 'A small kitchen, a big dream — Rahman Chicken Center was born from a family recipe and a passion for perfection.' },
-  { year: '2017', title: 'First Award', text: "Recognized as the city's best flame-grilled restaurant, earning our first culinary excellence award." },
-  { year: '2020', title: 'Going Digital', text: 'Launched online ordering and home delivery, bringing our premium dining experience directly to your doorstep.' },
-  { year: '2024', title: 'National Recognition', text: 'Named among the top 50 restaurants in the country. Opened our flagship store featuring a live grill experience.' },
+  { year: '2014', title: 'The Beginning', text: 'A small butcher shop, a big dream — Rahman Chicken Center was born from a passion for quality meat.' },
+  { year: '2017', title: 'First Award', text: "Recognized as the city's highest-quality meat provider, setting new standards for hygiene." },
+  { year: '2020', title: 'Going Digital', text: 'Launched online ordering and home delivery, bringing premium farm-fresh chicken directly to your doorstep.' },
+  { year: '2024', title: 'National Recognition', text: 'Named among the top trusted fresh meat brands. Opened our flagship processing center.' },
 ]
 
 function AnimatedCounter({ target, suffix = '' }) {
@@ -92,8 +92,8 @@ export default function About() {
             The Story of <span className="text-primary italic">Rahman Chicken Center</span>
           </h2>
           <p className="text-warm-gray text-base max-w-xl mx-auto font-light leading-relaxed">
-            Born from a passion for perfection, we've been serving the most exquisite,
-            flame-grilled culinary creations for over a decade.
+            Born from a commitment to quality, we've been providing the finest,
+            most hygienic farm-fresh chicken cuts for over a decade.
           </p>
         </motion.div>
 
@@ -109,8 +109,8 @@ export default function About() {
             <div className="relative rounded-3xl overflow-hidden glass-panel p-2 shadow-2xl">
               <div className="rounded-2xl overflow-hidden bg-dark h-[500px] sm:h-[600px] relative image-zoom-container">
                 <img
-                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80"
-                  alt="Our Culinary Kitchen"
+                  src="https://images.unsplash.com/photo-1626082927389-6cd097cbc6ec?auto=format&fit=crop&w=1000&q=80"
+                  alt="Our Butcher Shop"
                   className="w-full h-full object-cover filter brightness-90 contrast-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent mix-blend-multiply" />
@@ -146,15 +146,15 @@ export default function About() {
             </h3>
             <div className="space-y-5 text-warm-gray leading-[1.8] font-light text-base mb-12">
               <p>
-                It all started in a small kitchen with a singular vision — to elevate the
-                grilled chicken experience to a fine-dining standard. What began
-                as a closely guarded family secret has blossomed into a
-                beloved culinary destination.
+                It all started with a singular vision — to elevate the
+                local meat shopping experience to a premium standard. What began
+                as a commitment to hygiene and quality has blossomed into a
+                trusted household name for fresh chicken.
               </p>
               <p>
-                Every dish at Rahman Chicken Center represents our commitment to culinary artistry.
-                Slow-grilled over artisanal charcoal and paired with our handcrafted sauces,
-                we promise an unforgettable gastronomic journey.
+                Every cut at Rahman Chicken Center represents our dedication to excellence.
+                Carefully cleaned, precisely cut, and packed with hygiene,
+                we promise the best foundation for your home-cooked meals.
               </p>
             </div>
 

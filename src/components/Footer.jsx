@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const footerLinks = {
   Menu: [
-    { name: 'Grilled Chicken', href: '/menu' },
-    { name: 'Fried Chicken', href: '/menu' },
-    { name: 'Wings', href: '/menu' },
-    { name: 'Burgers', href: '/menu' },
+    { name: 'Whole Bird', href: '/menu' },
+    { name: 'Boneless Cuts', href: '/menu' },
+    { name: 'Curry Cut', href: '/menu' },
+    { name: 'Specialty Meat', href: '/menu' },
     { name: 'Combos', href: '/menu' },
   ],
   Company: [
@@ -71,10 +71,10 @@ export default function Footer() {
 
             <div className="relative z-10 text-center lg:text-left max-w-xl">
               <h4 className="font-playfair font-bold text-cream text-2xl sm:text-3xl mb-3 leading-tight">
-                Join the <span className="text-primary italic">Culinary Club</span>
+                Join the <span className="text-primary italic">Fresh Meat Club</span>
               </h4>
               <p className="text-warm-gray text-base leading-relaxed font-light">
-                Subscribe for exclusive reservations, secret menu items, and the latest updates from our chef.
+                Subscribe for exclusive discounts, special cuts, and the latest updates from our butchers.
               </p>
             </div>
 
@@ -107,13 +107,13 @@ export default function Footer() {
                 </div>
                 <div>
                   <h3 className="font-playfair text-2xl font-bold text-cream leading-none tracking-tight group-hover:text-primary transition-colors duration-400">Rahman Chicken Center</h3>
-                  <p className="text-[9px] tracking-[0.3em] uppercase text-warm-gray mt-1 font-medium">Premium Dining</p>
+                  <p className="text-[9px] tracking-[0.3em] uppercase text-warm-gray mt-1 font-medium">Premium Fresh Meats</p>
                 </div>
               </Link>
 
               <p className="text-warm-gray text-base leading-relaxed max-w-sm font-light">
-                Serving the most exquisite, flame-grilled culinary creations since 2014.
-                Premium ingredients, bold flavors, unparalleled service.
+                Providing the finest, most hygienic farm-fresh chicken since 2014.
+                Premium quality meat, clean cuts, and unparalleled service.
               </p>
 
               <div className="space-y-4 pt-2">

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Menu', href: '/menu' },
+  { name: 'Cuts & Pricing', href: '/menu' },
   { name: 'Delivery', href: '/delivery' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
@@ -60,7 +60,7 @@ export default function Navbar({ cartCount, onCartClick }) {
                   Rahman Chicken Center
                 </h1>
                 <p className="text-[8px] tracking-[0.3em] uppercase text-warm-gray mt-0.5 font-medium">
-                  Premium Dining
+                  Fresh Premium Meats
                 </p>
               </div>
             </RouterLink>
@@ -244,7 +244,7 @@ export default function Navbar({ cartCount, onCartClick }) {
                 </button>
               </div>
               <p className="text-warm-gray text-sm mt-5 ml-2 font-light">
-                Try searching for <span className="text-primary cursor-pointer hover:underline">"grilled chicken"</span> or <span className="text-primary cursor-pointer hover:underline">"wings"</span>
+                Try searching for <span className="text-primary cursor-pointer hover:underline">"boneless breast"</span> or <span className="text-primary cursor-pointer hover:underline">"whole chicken"</span>
               </p>
             </motion.div>
           </motion.div>
