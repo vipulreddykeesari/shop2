@@ -58,8 +58,13 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     try {
-      await sendOtp(form.phone);
+      const res = await sendOtp(form.phone);
       setOtpSent(true);
+      
+      // Temporary: Show OTP in an alert since SMS isn't set up yet!
+      if (res.data?.debug_otp) {
+        alert(`TEST OTP: ${res.data.debug_otp}`);
+      }
     } catch (err: any) {
       setError(err.response?.data?.error || 'Failed to send OTP.');
     } finally {
