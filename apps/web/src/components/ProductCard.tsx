@@ -64,9 +64,17 @@ export default function ProductCard({ product }: { product: Product }) {
     <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1">
       {/* Image Section */}
       <div className="relative h-48 sm:h-56 bg-gradient-to-br from-orange-50 to-red-50 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl opacity-80 group-hover:scale-110 transition-transform duration-500">
-          {categoryEmojis[product.category] || '🍗'}
-        </div>
+        {product.image ? (
+          <img 
+            src={product.image} 
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl opacity-80 group-hover:scale-110 transition-transform duration-500">
+            {categoryEmojis[product.category] || '🍗'}
+          </div>
+        )}
 
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">

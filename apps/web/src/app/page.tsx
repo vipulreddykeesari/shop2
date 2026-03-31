@@ -101,12 +101,16 @@ export default function HomePage() {
             {/* Hero Image Area */}
             <div className="relative hidden lg:flex items-center justify-center animate-slide-in-right">
               <div className="relative w-96 h-96">
-                {/* Floating chicken emoji */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[10rem] animate-float drop-shadow-2xl">
-                  🍗
+                {/* Main Hero Image */}
+                <div className="absolute inset-4 rounded-full overflow-hidden border-8 border-white/10 shadow-2xl z-20 animate-float">
+                  <img 
+                    src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=1000" 
+                    alt="Delicious Fresh Chicken" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 {/* Decorative rings */}
-                <div className="absolute inset-0 border-2 border-primary/20 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 border-2 border-primary/20 rounded-full animate-pulse z-10"></div>
                 <div className="absolute inset-4 border-2 border-primary/10 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 <div className="absolute inset-8 border-2 border-primary/5 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
 
@@ -400,13 +404,13 @@ function getFallbackCategories() {
 
 function getFallbackProducts() {
   return [
-    { id: '1', name: 'Fresh Whole Chicken', description: 'Farm-fresh whole broiler chicken, cleaned and ready to cook.', category: 'fresh-chicken', pricePerKg: 220, unit: 'kg', image: '', weights: [{ label: '500g', value: 0.5, price: 110 }, { label: '1 kg', value: 1, price: 220 }, { label: '2 kg', value: 2, price: 440 }], inStock: true, stockQty: 50, rating: 4.5, reviews: 128, tags: ['bestseller', 'farm-fresh'] },
-    { id: '2', name: 'Chicken Breast (Boneless)', description: 'Premium boneless chicken breast, perfect for grilling.', category: 'cuts-pieces', pricePerKg: 350, unit: 'kg', image: '', weights: [{ label: '250g', value: 0.25, price: 87.5 }, { label: '500g', value: 0.5, price: 175 }, { label: '1 kg', value: 1, price: 350 }], inStock: true, stockQty: 30, rating: 4.7, reviews: 95, tags: ['premium', 'boneless'] },
-    { id: '3', name: 'Chicken Wings', description: 'Juicy chicken wings, perfect for frying or baking.', category: 'cuts-pieces', pricePerKg: 280, unit: 'kg', image: '', weights: [{ label: '500g', value: 0.5, price: 140 }, { label: '1 kg', value: 1, price: 280 }], inStock: true, stockQty: 25, rating: 4.3, reviews: 67, tags: ['popular', 'party'] },
-    { id: '4', name: 'Chicken Drumsticks', description: 'Meaty chicken drumsticks, ideal for tandoori or curry.', category: 'cuts-pieces', pricePerKg: 300, unit: 'kg', image: '', weights: [{ label: '500g', value: 0.5, price: 150 }, { label: '1 kg', value: 1, price: 300 }, { label: '2 kg', value: 2, price: 600 }], inStock: true, stockQty: 40, rating: 4.6, reviews: 112, tags: ['bestseller'] },
-    { id: '5', name: 'Country Chicken (Desi)', description: 'Free-range country chicken with rich flavor.', category: 'fresh-chicken', pricePerKg: 550, unit: 'kg', image: '', weights: [{ label: '500g', value: 0.5, price: 275 }, { label: '1 kg', value: 1, price: 550 }], inStock: true, stockQty: 15, rating: 4.8, reviews: 89, tags: ['premium', 'free-range'] },
-    { id: '7', name: 'Chicken Lollipop (Ready to Cook)', description: 'Pre-marinated chicken lollipops, ready to fry.', category: 'ready-to-cook', pricePerKg: 420, unit: 'kg', image: '', weights: [{ label: '500g', value: 0.5, price: 210 }, { label: '1 kg', value: 1, price: 420 }], inStock: true, stockQty: 18, rating: 4.6, reviews: 78, tags: ['ready-to-cook', 'appetizer'] },
-    { id: '8', name: 'Tandoori Chicken (Marinated)', description: 'Authentic tandoori marinated chicken, ready to grill.', category: 'ready-to-cook', pricePerKg: 450, unit: 'kg', image: '', weights: [{ label: '500g', value: 0.5, price: 225 }, { label: '1 kg', value: 1, price: 450 }], inStock: true, stockQty: 12, rating: 4.7, reviews: 92, tags: ['ready-to-cook', 'bestseller'] },
-    { id: '9', name: 'Family Chicken Combo', description: 'Perfect family pack: whole chicken + boneless + wings.', category: 'combos-offers', pricePerKg: 280, unit: 'pack', image: '', weights: [{ label: 'Family Pack (2kg)', value: 2, price: 560 }], originalPrice: 680, inStock: true, stockQty: 10, rating: 4.8, reviews: 145, tags: ['combo', 'bestseller'] },
+    { id: '1', name: 'Fresh Whole Chicken', description: 'Farm-fresh whole broiler chicken, cleaned and ready to cook.', category: 'fresh-chicken', pricePerKg: 220, unit: 'kg', image: 'https://images.unsplash.com/photo-1598449356475-b9f71db7d847?auto=format&fit=crop&q=80&w=800', weights: [{ label: '500g', value: 0.5, price: 110 }, { label: '1 kg', value: 1, price: 220 }, { label: '2 kg', value: 2, price: 440 }], inStock: true, stockQty: 50, rating: 4.5, reviews: 128, tags: ['bestseller', 'farm-fresh'] },
+    { id: '2', name: 'Chicken Breast (Boneless)', description: 'Premium boneless chicken breast, perfect for grilling.', category: 'cuts-pieces', pricePerKg: 350, unit: 'kg', image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&q=80&w=800', weights: [{ label: '250g', value: 0.25, price: 87.5 }, { label: '500g', value: 0.5, price: 175 }, { label: '1 kg', value: 1, price: 350 }], inStock: true, stockQty: 30, rating: 4.7, reviews: 95, tags: ['premium', 'boneless'] },
+    { id: '3', name: 'Chicken Wings', description: 'Juicy chicken wings, perfect for frying or baking.', category: 'cuts-pieces', pricePerKg: 280, unit: 'kg', image: 'https://images.unsplash.com/photo-1628296338029-450eb9dd0a9c?auto=format&fit=crop&q=80&w=800', weights: [{ label: '500g', value: 0.5, price: 140 }, { label: '1 kg', value: 1, price: 280 }], inStock: true, stockQty: 25, rating: 4.3, reviews: 67, tags: ['popular', 'party'] },
+    { id: '4', name: 'Chicken Drumsticks', description: 'Meaty chicken drumsticks, ideal for tandoori or curry.', category: 'cuts-pieces', pricePerKg: 300, unit: 'kg', image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&q=80&w=800', weights: [{ label: '500g', value: 0.5, price: 150 }, { label: '1 kg', value: 1, price: 300 }, { label: '2 kg', value: 2, price: 600 }], inStock: true, stockQty: 40, rating: 4.6, reviews: 112, tags: ['bestseller'] },
+    { id: '5', name: 'Country Chicken (Desi)', description: 'Free-range country chicken with rich flavor.', category: 'fresh-chicken', pricePerKg: 550, unit: 'kg', image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&q=80&w=800', weights: [{ label: '500g', value: 0.5, price: 275 }, { label: '1 kg', value: 1, price: 550 }], inStock: true, stockQty: 15, rating: 4.8, reviews: 89, tags: ['premium', 'free-range'] },
+    { id: '7', name: 'Chicken Lollipop (Ready to Cook)', description: 'Pre-marinated chicken lollipops, ready to fry.', category: 'ready-to-cook', pricePerKg: 420, unit: 'kg', image: 'https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=800', weights: [{ label: '500g', value: 0.5, price: 210 }, { label: '1 kg', value: 1, price: 420 }], inStock: true, stockQty: 18, rating: 4.6, reviews: 78, tags: ['ready-to-cook', 'appetizer'] },
+    { id: '8', name: 'Tandoori Chicken (Marinated)', description: 'Authentic tandoori marinated chicken, ready to grill.', category: 'ready-to-cook', pricePerKg: 450, unit: 'kg', image: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&q=80&w=800', weights: [{ label: '500g', value: 0.5, price: 225 }, { label: '1 kg', value: 1, price: 450 }], inStock: true, stockQty: 12, rating: 4.7, reviews: 92, tags: ['ready-to-cook', 'bestseller'] },
+    { id: '9', name: 'Family Chicken Combo', description: 'Perfect family pack: whole chicken + boneless + wings.', category: 'combos-offers', pricePerKg: 280, unit: 'pack', image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&q=80&w=800', weights: [{ label: 'Family Pack (2kg)', value: 2, price: 560 }], originalPrice: 680, inStock: true, stockQty: 10, rating: 4.8, reviews: 145, tags: ['combo', 'bestseller'] },
   ];
 }
