@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # MongoDB
+  mongodb:
+    image: mongo:7
+    container_name: smart-chicken-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: smart-chicken-shop
+
+  # Redis
+  redis:
+    image: redis:7-alpine
+    container_name: smart-chicken-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  # MCP Server
+  mcp-server:
+    build:
+      context: ./mcp-server
+      dockerfile: Dockerfile
+    container_name: smart-chicken-mcp
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      MONGODB_URI: mongodb://mongodb:27017/smart-chicken-shop
+      REDIS_URL: redis://redis:6379
+      AUTH_SERVICE_URL: http://auth-service:5001
+    depends_on:
+      - mongodb
+      - redis
+
+  # Auth Service
+  auth-service:
+    build:
+      context: ./services/auth-service
+      dockerfile: Dockerfile
+    container_name: smart-chicken-auth
+    ports:
+      - "5001:5001"
+    environment:
+      PORT: 5001
+      MONGODB_URI: mongodb://mongodb:27017/smart-chicken-shop
+      JWT_SECRET: your-super-secret-jwt-key
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - mongodb
+      - redis
+
+  # Web App
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    container_name: smart-chicken-web
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:4000
+    depends_on:
+      - mcp-server
+
+volumes:
+  mongo-data:
+  redis-data:
